@@ -76,6 +76,8 @@ services:
     container_name: loomio-channels
     image: loomio/loomio_channel_server
     restart: unless-stopped
+    ports:
+      - "5000:5000"
     networks:
       - main
     env_file: ./channels_env
